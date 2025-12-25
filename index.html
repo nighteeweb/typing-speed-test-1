@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Typing Speed Test</title>
+</head>
+<body>
+  <header>
+    <img id="main-logo" src="assets/images/logo-large.svg" alt="logo main">
+    <div class="personal-best">
+      <img src="assets/images/icon-personal-best.svg" alt="icon pb">
+      <p class="personal-best-description" id="pb-desc-1">Personal best:</p><p class="personal-best-description" id="pb-desc-2">Best:</p><p id="personal-best-score">0<!-- PB --></p><p class="personal-best-description"> WPM</p>
+    </div>
+  </header>
+  <main>
+    <div class="main">
+      <div class="main-head">
+        <div class="main-head-stats">
+          <div class="stats" id="wpm-container">WPM: <p class="stats-editable" id="wpm">0<!-- WPM --></p></div>
+          <div class="stats" id="accuracy-container">Accuracy: <p class="stats-editable" id="accuracy">100%<!-- Accuracy --></p></div>
+          <div class="stats">Time: <p class="stats-editable" id="time">0:60<!-- Time --></p></div>
+        </div>
+        <div class="main-head-settings">
+          <div class="main-head-difficulty">
+            <p id="difficulty">Difficulty:</p>
+            <div class="main-head-stats-buttons">
+              <button class="stats-button" id="easy">Easy</button>
+              <button class="stats-button" id="medium">Medium</button>
+              <button class="stats-button" id="hard" style="color: #4da6ff; border: 1px solid var(--blue-400);">Hard</button>
+            </div>
+            <div class="custom-select">
+              <div class="select-header">Hard <img class="arrow" src="assets/images/icon-down-arrow.svg"/></div>
+              <div class="options-container">
+                <div class="option" data-value="Easy">Easy</div>
+                <div class="option" data-value="Medium">Medium</div>
+                <div class="option active" data-value="Hard">Hard</div>
+              </div>
+            </div>
+          </div>
+          <div class="main-head-mode">
+            <p id="mode">Mode:</p>
+            <div class="main-head-stats-buttons">
+              <button id="mode-timed" class="stats-button" style="color: #4da6ff; border: 1px solid var(--blue-400);">Timed (60s)</button>
+              <button id="mode-passage" class="stats-button">Passage</button>
+            </div>
+              <div class="custom-select" style="margin-left: auto;">
+                <div class="select-header">Timed (60s) <img class="arrow" src="assets/images/icon-down-arrow.svg"/></div>
+                <div class="options-container">
+                  <div class="option active" data-value="Timed (60s)">Timed (60s)</div>
+                  <div class="option" data-value="Passage">Passage</div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    <!-- Passage -->
+      <div class="main-text">
+        <div id="text">The archaeological expedition unearthed artifacts that complicated prevailing theories about Bronze Age trade networks. Obsidian from Anatolia, lapis lazuli from Afghanistan, and amber from the Baltic—all discovered in a single Mycenaean tomb—suggested commercial connections far more extensive than previously hypothesized. "We've underestimated ancient peoples' navigational capabilities and their appetite for luxury goods," the lead researcher observed. "Globalization isn't as modern as we assume."</div>
+        <input type="text" id="hidden-input" disabled>
+        <div class="start-button">
+          <button id="start">Start Typing Test</button>
+          <p id="click-start">Or click the text and start typing</p>
+        </div>
+      </div>
+      <hr id="line">
+      <button id="restart-button">Restart Test <img id="icon-restart" src="assets/images/icon-restart.svg" alt="icon-restart"></button>
+    </div>
+  <!-- Test Complete Start -->
+    <div class="test-complete">
+      <div class="icon-completed-container"><img class="icon" id="icon-completed" src="assets/images/icon-completed.svg" alt="icon test complete"></div>
+      <img class="icon" id="icon-star-1" src="assets/images/pattern-star-2.svg" alt="icon star">
+      <h1 id="test-complete-head">Test Complete!</h1>
+      <p id="test-complete-description">Solid run. Keep pushing to beat your high score.</p>
+
+      <div class="result">
+        <div class="result-stats">
+          <p class="result-stats-description">WPM:</p>
+          <p class="result-stats-main" id="result-wpm">85</p><!-- WPM -->
+        </div>
+        <div class="result-stats">
+          <p class="result-stats-description">Accuracy:</p>
+          <p class="result-stats-main" id="result-accuracy">90%</p><!-- Accuracy -->
+        </div>
+        <div class="result-stats">
+          <p class="result-stats-description">Characters</p>
+          <div class="result-stats-main"><span class="result-stats-main" id="result-correct" style="color: var(--green-500);">120</span><span class="result-stats-main">/</span><span id="result-wrong" class="result-stats-main" style="color: var(--red-500);">5</span></div><!-- Correct/Incorrect -->
+        </div>
+      </div>
+
+      <img class="icon" id="icon-star-2" src="assets/images/pattern-star-1.svg" alt="icon star">
+      <button id="again">Go Again <img id="icon-again" src="assets/images/icon-restart.svg" alt="icon-restart"></button>
+      <img id="confetti" src="assets/images/pattern-confetti.svg" alt="img confetti">
+    </div>
+  <!-- Test Complete End -->
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
